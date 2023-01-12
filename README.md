@@ -26,7 +26,7 @@ You will not need to make any edits to HTML or CSS for this project.
 
 * Download the Qualified assessment files to your computer.
 * Run `npm install` to install the project.
-* Use Postman to test your application and/or visit [this repository](https://github.com/Thinkful-Ed/starter-movie-front-end) if you would like to see your project connected to a frontend application.
+* Use Postman to test your application and/or visit [this repository](https://github.com/BountyFiveO/WeLoveMovies-Front-end) if you would like to see your project connected to a frontend application.
 * Run `npm test` to run the tests.
 
 __Note:__ *Note that the tests make use of an in-memory SQLite database. When updating a record in an in-memory SQLite database, the server does not automatically respond with an array of updated records like PostgreSQL does. As a result, when updating a record, you will need to query the database again to return updated record.*
