@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const {
   PRODUCTION_DATABASE_URL = 'postgres://kqiseawp:D8CWmmI3JsJUnDHG0_g3gvgG3EOS7rhT@isilo.db.elephantsql.com/kqiseawp',
-  DEVELOPMENT_DATABASE_URL = 'postgres://kqiseawp:D8CWmmI3JsJUnDHG0_g3gvgG3EOS7rhT@isilo.db.elephantsql.com/kqiseawp'
+  DEVELOPMENT_DATABASE_URL = 'postgres://qrkkvsmg:KTxvDy5jcKyRVkQA2h64AQ5cIyhLMQ1k@salt.db.elephantsql.com/qrkkvsmg'
 } = process.env;
 
 module.exports = {
