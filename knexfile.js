@@ -2,12 +2,12 @@ const path = require("path");
 require("dotenv").config();
 
 const {
-  PRODUCTION_DATABASE_URL = "postgres://kqiseawp:D8CWmmI3JsJUnDHG0_g3gvgG3EOS7rhT@isilo.db.elephantsql.com/kqiseawp",
-  DEV_DATABASE_URL = "",
+  PRODUCTION_DATABASE_URL = 'postgres://kqiseawp:D8CWmmI3JsJUnDHG0_g3gvgG3EOS7rhT@isilo.db.elephantsql.com/kqiseawp',
+  DEVELOPMENT_DATABASE_URL = 'postgres://kqiseawp:D8CWmmI3JsJUnDHG0_g3gvgG3EOS7rhT@isilo.db.elephantsql.com/kqiseawp'
 } = process.env;
 
 module.exports = {
-  development: {
+ production: {
     client: "postgresql",
     connection: PRODUCTION_DATABASE_URL,
     pool: { min: 0, max: 5 },
@@ -19,9 +19,9 @@ module.exports = {
     },
   },
 
-  production: {
+  development: {
     client: "postgresql",
-    connection: DEV_DATABASE_URL,
+    connection: DEVELOPMENT_DATABASE_URL,
     pool: { min: 0, max: 5 },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
