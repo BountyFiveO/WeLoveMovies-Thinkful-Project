@@ -47,6 +47,6 @@ module.exports = {
     seeds: {
       directory: path.join(__dirname, "src", "db", "seeds"),
     },
-    useNullAsDefault: true,
+    useNullAsDefault: false,
   },
 };
