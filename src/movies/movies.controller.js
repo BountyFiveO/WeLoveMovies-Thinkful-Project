@@ -3,7 +3,7 @@ const service = require("./movies.service");
 
 async function movieExists (req, res, next) {
     const { movieId } = req.params;
-    console.log(movieId)
+    console.log(movieId);
     const match = await service.read(movieId);
     if (!match)
       return next({
