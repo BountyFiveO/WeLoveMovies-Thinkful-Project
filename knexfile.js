@@ -2,6 +2,7 @@ const path = require("path");
 require("dotenv").config();
 
 const {
+  DEVELOPMENT_DATABASE_URL,
   PRODUCTION_DATABASE_URL,
 } = process.env;
 // const URL =
