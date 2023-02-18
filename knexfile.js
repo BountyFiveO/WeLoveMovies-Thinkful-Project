@@ -14,7 +14,7 @@ const {
 //     NODE_ENV === "production" ? PRODUCTION_DATABASE_URL : DEVELOPMENT_DATABASE_URL;
 export const production = {
   client: "postgresql",
-  connection: PRODUCTION_DATABASE_URL,
+  connection: postgres://kqiseawp:9bXnOXLaNs9-k7JbEz3OL8KcJWdumZXL@isilo.db.elephantsql.com/kqiseawp,
   pool: { min: 0, max: 5 },
   migrations: {
     directory: join(__dirname, "src", "db", "migrations"),
@@ -25,7 +25,7 @@ export const production = {
 };
 export const development = {
   client: "postgresql",
-  connection: DEVELOPMENT_DATABASE_URL,
+  connection: postgres://kqiseawp:9bXnOXLaNs9-k7JbEz3OL8KcJWdumZXL@isilo.db.elephantsql.com/kqiseawp,
   pool: { min: 0, max: 5 },
   migrations: {
     directory: join(__dirname, "src", "db", "migrations"),
