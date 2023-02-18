@@ -1,17 +1,10 @@
 const path = require("path");
 require("dotenv").config();
 
-// const {
-//   DEVELOPMENT_DATABASE_URL,
-//   PRODUCTION_DATABASE_URL,
-// } = process.env;
-const URL = {
- if (NODE_ENV === "production") {
-  PRODUCTION_DATABASE_URL
- } else {
- DEVELOPMENT_DATABASE_URL;
- }
+const = {
+ PRODUCTION_DATABASE_URL = "postgres://kqiseawp:9bXnOXLaNs9-k7JbEz3OL8KcJWdumZXL@isilo.db.elephantsql.com/kqiseawp"
 }
+
 module.exports = {
  production: {
     client: "postgresql",
