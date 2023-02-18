@@ -1,11 +1,11 @@
 import { join } from "path";
 require("dotenv").config();
 
+// make a variable for the database url for both production and development
+const PRODUCTION_DATABASE_URL = process.env.DATABASE_URL;
+const DEVELOPMENT_DATABASE_URL = process.env.DATABASE_URL;
 
-const {
-  DEVELOPMENT_DATABASE_URL,
-  PRODUCTION_DATABASE_URL,
-} = process.env;
+
 // const URL =
 //     NODE_ENV === "production" ? PRODUCTION_DATABASE_URL : DEVELOPMENT_DATABASE_URL;
 export const production = {
