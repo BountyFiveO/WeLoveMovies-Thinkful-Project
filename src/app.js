@@ -10,6 +10,7 @@ const notFound = require("./Errors/notFound");
 
 app.use(cors());
 app.use(express.json());
+const pool = require('./db');
 
 app.use("/movies", moviesRouter);
 app.use("/reviews", reviewsRouter);

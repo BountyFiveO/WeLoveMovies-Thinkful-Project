@@ -1,5 +1,6 @@
-const path = require("path");
+import { join } from "path";
 require("dotenv").config();
+
 
 const {
   DEVELOPMENT_DATABASE_URL,
@@ -7,42 +8,38 @@ const {
 } = process.env;
 // const URL =
 //     NODE_ENV === "production" ? PRODUCTION_DATABASE_URL : DEVELOPMENT_DATABASE_URL;
-module.exports = {
- production: {
-    client: "postgresql",
-    connection: PRODUCTION_DATABASE_URL,
-    pool: { min: 0, max: 5 },
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
+export const production = {
+  client: "postgresql",
+  connection: PRODUCTION_DATABASE_URL,
+  pool: { min: 0, max: 5 },
+  migrations: {
+    directory: join(__dirname, "src", "db", "migrations"),
   },
-
-  development: {
-    client: "postgresql",
-    connection: DEVELOPMENT_DATABASE_URL,
-    pool: { min: 0, max: 5 },
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
+  seeds: {
+    directory: join(__dirname, "src", "db", "seeds"),
   },
-
-  test: {
-    client: "sqlite3",
-    connection: {
-      filename: ":memory:",
-    },
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
-    useNullAsDefault: false,
+};
+export const development = {
+  client: "postgresql",
+  connection: DEVELOPMENT_DATABASE_URL,
+  pool: { min: 0, max: 5 },
+  migrations: {
+    directory: join(__dirname, "src", "db", "migrations"),
   },
+  seeds: {
+    directory: join(__dirname, "src", "db", "seeds"),
+  },
+};
+export const test = {
+  client: "sqlite3",
+  connection: {
+    filename: ":memory:",
+  },
+  migrations: {
+    directory: join(__dirname, "src", "db", "migrations"),
+  },
+  seeds: {
+    directory: join(__dirname, "src", "db", "seeds"),
+  },
+  useNullAsDefault: false,
 };
