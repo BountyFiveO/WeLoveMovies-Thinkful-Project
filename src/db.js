@@ -17,5 +17,4 @@ const pool = new Pool({
 //   database: 'database',
 //   max: 10, // set this to the maximum number of connections allowed by ElephantSQL
 // });
-
-export default pool;
+module.exports = pool;
