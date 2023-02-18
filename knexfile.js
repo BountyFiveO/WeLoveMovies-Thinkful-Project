@@ -1,7 +1,13 @@
-import { join } from "path";
-require("dotenv").config();
+// import { join } from "path";
+// require("dotenv").config();
 
-const DEVELOPMENT_DATABASE_URL = process.env;
+require("dotenv.development").config();
+require("dotenv.production").config();
+
+const {
+    DEVELOPMENT_DATABASE_URL,
+    PRODUCTION_DATABASE_URL,
+  } = process.env;
 
 
 // const URL =
