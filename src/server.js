@@ -1,9 +1,7 @@
-import { PORT } from 'process.env';
-import app from './app.js';
-import knex from './db/connection.js';
-
+const { PORT = 5001 } = process.env;
+const app = require("./app.js");
+const knex = require("./db/connection.js");
 const listener = () => console.log(`Listening on Port ${PORT}!`);
-
 knex.migrate
   .latest()
   .then((migrations) => {
@@ -11,4 +9,3 @@ knex.migrate
     app.listen(PORT, listener);
   })
   .catch(console.error);
-PORT(5001);
