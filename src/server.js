@@ -2,8 +2,6 @@ import { PORT } from 'process.env';
 import app from './app.js';
 import knex from './db/connection.js';
 
-
-
 const listener = () => console.log(`Listening on Port ${PORT}!`);
 
 knex.migrate
@@ -13,3 +11,4 @@ knex.migrate
     app.listen(PORT, listener);
   })
   .catch(console.error);
+PORT(5001);
