@@ -6,7 +6,11 @@ require("dotenv").config();
 //   PRODUCTION_DATABASE_URL,
 // } = process.env;
 const URL = {
- NODE_ENV == "production" ? PRODUCTION_DATABASE_URL : DEVELOPMENT_DATABASE_URL;
+ if (NODE_ENV === "production") {
+  PRODUCTION_DATABASE_URL
+ } else {
+ DEVELOPMENT_DATABASE_URL;
+ }
 }
 module.exports = {
  production: {
