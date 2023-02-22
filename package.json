@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "zid-be-project-movie-01-qualified",
   "main": "src/app.js",
-   "scripts": {
+  "scripts": {
     "build": "react-scripts build",
     "docker:build": "docker image build . -t thinkful-ed/zid-be-project-movie-01-qualified",
     "docker:run": "docker run --rm -it -p 5001:5001 thinkful-ed/zid-be-project-movie-01-qualified",
@@ -26,6 +26,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "dotenv-vault": "^1.18.0",
     "express": "^4.18.2",
     "knex": "^0.21.12",
     "morgan": "^1.10.0",

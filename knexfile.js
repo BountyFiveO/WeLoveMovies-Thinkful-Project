@@ -5,7 +5,7 @@ if (process.env.USER || process.env.USERNAME) require("dotenv").config();
 const {
   DATABASE_URL = "postgresql://postgres@localhost/postgres",
 } = process.env;
-
+console.log(process.env.DATABASE_URL)
 module.exports = {
   development: {
     client: "postgresql",
