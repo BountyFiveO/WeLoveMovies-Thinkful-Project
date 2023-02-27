@@ -1,6 +1,7 @@
 const path = require("path");
 
-if (process.env.USER || process.env.USERNAME) require("dotenv").config();
+require('dotenv').config();
+const path = require("path");
 
 const {
   DATABASE_URL = "postgres://kqiseawp:t10QVo2vDlMQSPJ34mlmlqEyJqIhLHXe@isilo.db.elephantsql.com/kqiseawp",
