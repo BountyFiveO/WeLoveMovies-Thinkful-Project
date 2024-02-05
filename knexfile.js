@@ -1,9 +1,8 @@
-require('dotenv').config();
+// require('dotenv').config();
 // const path = require("path");
 // const env = process.env;
 
-const DATABASE_URL = process.env.DB_URL;
-  // "postgres://kqiseawp:t10QVo2vDlMQSPJ34mlmlqEyJqIhLHXe@isilo.db.elephantsql.com/kqiseawp"
+const DATABASE_URL = "postgres://kqiseawp:t10QVo2vDlMQSPJ34mlmlqEyJqIhLHXe@isilo.db.elephantsql.com/kqiseawp"
 module.exports = {
   development: {
     client: "postgresql",
