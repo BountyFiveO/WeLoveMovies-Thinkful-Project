@@ -2,7 +2,7 @@
 // const path = require("path");
 // const env = process.env;
 
-const DATABASE_URL = "postgres://kqiseawp:t10QVo2vDlMQSPJ34mlmlqEyJqIhLHXe@isilo.db.elephantsql.com/kqiseawp"
+const DATABASE_URL = "postgres://vyqaiuwv:8e2fgONBL0ljOjQPR2_TD9JlnxZOyKux@berry.db.elephantsql.com/vyqaiuwv"
 module.exports = {
   development: {
     client: "postgresql",
