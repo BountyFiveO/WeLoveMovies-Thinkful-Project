@@ -6,7 +6,7 @@ const reviewsRouter = require("./reviews/reviews.router");
 const moviesRouter = require("./movies/movies.router");
 const theatersRouter = require("./theaters/theaters.router");
 // const errorHandler = require("./Errors/errorHandler");
-// const notFound = require("./Errors/notFound");
+const notFound = require("./Errors/notFound");
 
 app.use(cors());
 app.use(express.json());
@@ -18,7 +18,8 @@ app.use("/theaters", theatersRouter)
 
 // Not found handler
 app.use((request, _response, next) => {
-    next({ status: 404, message: `Not found: ${request.originalUrl}` });
+    //next({ status: 404, message: `Not found: ${request.originalUrl}` });
+    next({ status: 404, message: `${notFound}` });
   });
   
   // Error handler
