@@ -5,7 +5,7 @@ import FullMovie from "./movie/FullMovie";
 import TheaterList from "./theaters/TheaterList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./shared/Footer";
-const pool = require('../../src/db.js');
+const pool = require('../../src/db/connection.js');
 
 function App() {
   return (
