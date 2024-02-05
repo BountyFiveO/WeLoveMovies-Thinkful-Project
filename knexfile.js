@@ -1,9 +1,8 @@
-require('dotenv').config();
+// require('dotenv').config()
 const path = require("path");
+// const env = process.env;
 
-const {
-  DATABASE_URL = "postgres://kqiseawp:t10QVo2vDlMQSPJ34mlmlqEyJqIhLHXe@isilo.db.elephantsql.com/kqiseawp",
-} = process.env;
+const DATABASE_URL = "postgres://vyqaiuwv:8e2fgONBL0ljOjQPR2_TD9JlnxZOyKux@berry.db.elephantsql.com/vyqaiuwv"
 module.exports = {
   development: {
     client: "postgresql",
@@ -27,19 +26,5 @@ module.exports = {
     seeds: {
       directory: path.join(__dirname, "src", "db", "seeds"),
     },
-  },
-
-  test: {
-    client: "sqlite3",
-    connection: {
-      filename: ":memory:",
-    },
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
-    useNullAsDefault: true,
   },
 };

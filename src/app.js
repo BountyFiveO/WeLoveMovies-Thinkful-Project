@@ -10,7 +10,7 @@ const theatersRouter = require("./theaters/theaters.router");
 
 app.use(cors());
 app.use(express.json());
-const pool = require('../db');
+const pool = require('./db/connection');
 
 app.use("/movies", moviesRouter);
 app.use("/reviews", reviewsRouter);
@@ -19,6 +19,7 @@ app.use("/theaters", theatersRouter)
 // Not found handler
 app.use((request, _response, next) => {
     next({ status: 404, message: `Not found: ${request.originalUrl}` });
+   // next({ status: 404, message: `${notFound}` });
   });
   
   // Error handler
