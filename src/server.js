@@ -3,8 +3,8 @@ require("dotenv").config();
 
 const { PORT = 5001 } = process.env;
 
-const app = require("./app");
-const knex = require("./db/connection");
+const app = require("./app.js");
+const knex = require("./db/connection.js");
 
 const listener = () => console.log(`Listening on Port ${PORT}!`);
 
