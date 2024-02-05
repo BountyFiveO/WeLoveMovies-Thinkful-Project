@@ -10,7 +10,7 @@ const theatersRouter = require("./theaters/theaters.router");
 
 app.use(cors());
 app.use(express.json());
-const pool = require('./db');
+const pool = require('./db/connection');
 
 app.use("/movies", moviesRouter);
 app.use("/reviews", reviewsRouter);
